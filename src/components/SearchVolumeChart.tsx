@@ -112,7 +112,7 @@ const SearchVolumeChart: React.FC<SearchVolumeChartProps> = ({ data }) => {
       .attr("text-anchor", "middle")
       .style("font-size", "20px")
       .style("font-weight", "bold")
-      .text("EU Interior Design Style Search Volume");
+      .text("EU Interior Design Style Search Volume for 2023");
   }, [data]);
 
   return (

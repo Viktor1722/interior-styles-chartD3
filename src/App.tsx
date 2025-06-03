@@ -2,7 +2,9 @@ import React from "react";
 import "./App.css";
 import SearchVolumeChart from "./components/SearchVolumeChart";
 import EuropeStyleMap from "./components/EuropeStyleMap";
+import ColorPaletteChart from "./components/ColorPaletteChart";
 import { searchVolumeData, countryStyleData } from "./data/roomData";
+import { interiorStylesData } from "./data/interiorStylesData";
 
 function App() {
   return (
@@ -18,6 +20,17 @@ function App() {
         <section className="chart-section">
           <h2>European Popular Style Preferences</h2>
           <EuropeStyleMap data={countryStyleData} />
+        </section>
+
+        <section className="chart-section">
+          <h2>Interior Style Color Palettes</h2>
+          <p
+            style={{ textAlign: "center", marginBottom: "20px", color: "#666" }}
+          >
+            Explore the signature color palettes of the most popular interior
+            design styles
+          </p>
+          <ColorPaletteChart data={interiorStylesData} />
         </section>
 
         <div className="description">
