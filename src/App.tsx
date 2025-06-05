@@ -2,9 +2,10 @@ import React from "react";
 import "./App.css";
 import SearchVolumeChart from "./components/SearchVolumeChart";
 import EuropeStyleMap from "./components/EuropeStyleMap";
-import ColorPaletteChart from "./components/ColorPaletteChart";
+import InteriorStyleChart from "./components/InteriorStyleChart";
 import { searchVolumeData, countryStyleData } from "./data/roomData";
 import { interiorStylesData } from "./data/interiorStylesData";
+import { interiorMaterialsData } from "./data/interiorMaterialsData";
 
 function App() {
   return (
@@ -23,14 +24,17 @@ function App() {
         </section>
 
         <section className="chart-section">
-          <h2>Interior Style Color Palettes</h2>
+          <h2>Interior Style Color Palettes & Materials</h2>
           <p
             style={{ textAlign: "center", marginBottom: "20px", color: "#666" }}
           >
-            Explore the signature color palettes of the most popular interior
-            design styles
+            Explore the signature color palettes and materials of the most
+            popular interior design styles
           </p>
-          <ColorPaletteChart data={interiorStylesData} />
+          <InteriorStyleChart
+            colorData={interiorStylesData}
+            materialData={interiorMaterialsData}
+          />
         </section>
 
         <div className="description">
@@ -114,6 +118,41 @@ function App() {
               <li>UK search volume data from Google Keyword Planner</li>
               <li>
                 European style preferences based on regional market analysis
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Source</h2>
+            <ul>
+              <b>
+                <li>Industrial</li>
+              </b>
+              <li>
+                https://industrialinteriors.eu/blogs/news/top-10-color-palette-for-industrial-interior-design?utm_source=chatgpt.com
+                https://industrialinteriors.eu/blogs/news/heres-a-curated-50-color-palette-for-industrial-interior-design?utm_source=chatgpt.com
+              </li>
+              <b>
+                <li>Scandinavian</li>
+              </b>
+              <li>
+                https://colorany.com/color-palettes/scandinavian-color-palettes/?utm_source=chatgpt.com
+                https://thecolorpalettestudio.com/blogs/color-palettes/color-palette-scandinavian-neutrals?utm_source=chatgpt.com
+              </li>
+
+              <b>
+                <li>Coastal</li>
+              </b>
+              <li>
+                https://medium.com/%40edwardgeorgelondon/the-ultimate-guide-to-coastal-color-schemes-e0dfe5f71605
+                https://housekeepingbay.com/coastal-colors-that-will-dominate-home-design?utm_source=chatgpt.com
+              </li>
+              <b>
+                <li>Rustic</li>
+              </b>
+              <li>
+                https://piktochart.com/tips/rustic-color-palette?utm_source=chatgpt.com
+                https://edwardgeorgelondon.com/rustic-color-guide/?utm_source=chatgpt.com
               </li>
             </ul>
           </section>

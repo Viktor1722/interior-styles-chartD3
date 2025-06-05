@@ -108,7 +108,6 @@ const ColorPaletteChart: React.FC<ColorPaletteChartProps> = ({ data }) => {
                 <div style="font-weight: bold; margin-bottom: 5px;">${style.style}</div>
                 <div style="color: ${color.hex}; font-weight: bold;">${color.name}</div>
                 <div style="font-size: 12px; margin-top: 3px;">${color.hex}</div>
-              
               `);
           })
           .on("mouseout", function () {
